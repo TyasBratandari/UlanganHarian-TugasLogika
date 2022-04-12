@@ -1,17 +1,22 @@
-package ulanganharian;
+public class soal7{
+    static boolean cari(int bilangan[],int ukuran){
+        for(int i = 0; i < (ukuran - 1); i++){
+            for(int j = (i + 1); j < ukuran; j++ ){
+                if(bilangan[i] == bilangan[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        int[] bilangan = {4, 1, 8, 7, 2};
+        int ukuran = bilangan.length;
 
-public class soal7 {
-    public static void main(String[] args){
-//        int[] array = {2,3,1,5,3};
-//        System.out.println(array);
-        
-        int[] angka={2,3,1,5,3};
-        int a = 0;
-        for(int i =0; i<angka.length; i++){
-            if(angka[i] == 3){
-            a += 1;
+        if(cari(bilangan, ukuran)){
+            System.out.println("ADA");
+        }else{
+            System.out.println("TIDAK ADA");
         }
-        }
-        System.out.println("Angka yang sama adalah " + a);
     }
 }
